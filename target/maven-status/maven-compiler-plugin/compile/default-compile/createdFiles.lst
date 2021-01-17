@@ -1,0 +1,8 @@
+ec\edu\epn\proyecto\IModeloBusqueda.class
+ec\edu\epn\proyecto\FiltracionNoticias.class
+ec\edu\epn\proyecto\BuscadorNoticiasCovid.class
+ec\edu\epn\proyecto\Noticia.class
+ec\edu\epn\proyecto\GestorConsulta.class
+ec\edu\epn\proyecto\ModeloBusqueda.class
+ec\edu\epn\proyecto\IPaginaWeb.class
+ec\edu\epn\proyecto\VistaPantalla.class
