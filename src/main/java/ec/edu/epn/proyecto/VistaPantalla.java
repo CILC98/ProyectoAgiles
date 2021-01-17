@@ -18,4 +18,10 @@ public class VistaPantalla {
         actualizarVista(noticias);
         return noticias;
     }
+    public ArrayList<Noticia> getInformacionConsulta(){
+        ArrayList noticias ;
+        noticias = new GestorConsulta().obtenerNoticias();
+        actualizarVista(noticias);
+        return noticias;
+    }
 }

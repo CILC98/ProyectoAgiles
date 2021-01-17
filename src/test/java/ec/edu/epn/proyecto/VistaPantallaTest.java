@@ -4,8 +4,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class VistaPantallaTest {
     @Test
@@ -40,12 +39,19 @@ public class VistaPantallaTest {
     }
 
     @Test
-    public void given_Filtros_when_getInformaciónFiltrada_cero(){
+    public void given_Filtros_when_getInformaciónFiltrada_long_cero(){
         VistaPantalla v = new VistaPantalla();
         String filtrosuser [] = {"holi","123","abc-123"};
         int actual = v.getInformacionFiltrada(filtrosuser).size();
         int expected = 0;
         assertEquals(0,actual);
+    }
+
+    @Test
+    public void given_Filtros_when_getInformaciónConsulta_notNull(){
+        VistaPantalla v = new VistaPantalla();
+        ArrayList<Noticia> noticias = v.getInformacionConsulta();
+        assertNotNull(noticias);
     }
 
 }

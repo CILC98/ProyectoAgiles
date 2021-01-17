@@ -32,4 +32,11 @@ public class ModeloBusquedaTest {
         int actual = m.devolverInformacionFiltrada(filtrosuser).size();
         assertNotNull(actual);
     }
+
+    @Test
+    public void given_filtros_when_devolverInformacion_notNull(){
+        ModeloBusqueda m = new ModeloBusqueda();
+        ArrayList<Noticia> noticias = m.devolverInformacion();
+        assertNotNull(noticias);
+    }
 }

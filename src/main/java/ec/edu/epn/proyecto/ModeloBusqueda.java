@@ -58,4 +58,9 @@ public class ModeloBusqueda {
         }
         return noticiasBuscadas;
     }
+
+    public ArrayList devolverInformacion(){
+        ArrayList noticiasBuscadas = this.noticias;
+        return noticiasBuscadas;
+    }
 }
