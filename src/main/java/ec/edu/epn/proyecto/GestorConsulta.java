@@ -6,8 +6,8 @@ import java.util.regex.Pattern;
 
 public class GestorConsulta {
 
-    public ArrayList obtenerNoticias() {
-        ArrayList noticias = new ModeloBusqueda().devolverInformacion();
+    public ArrayList solicitarNoticias() {
+        ArrayList noticias = new ModeloBusqueda().devolverNoticias();
         return noticias;
     }
 

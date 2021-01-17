@@ -11,7 +11,7 @@ public class GestorConsultaTest {
     @Test
     public void given_filtros_when_obtenerNoticias_notNull(){
         GestorConsulta g = new GestorConsulta();
-        ArrayList<Noticia> noticias = g.obtenerNoticias();
+        ArrayList<Noticia> noticias = g.solicitarNoticias();
         assertNotNull(noticias);
     }
 

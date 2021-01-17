@@ -7,16 +7,17 @@ public class ModeloBusqueda {
     ArrayList<Noticia> noticias = new ArrayList();
 
     public ModeloBusqueda() {
-        Noticia noticia = new Noticia("Cifras COVID-19 de los hospitales de Guayaquil no coinciden con las " +
-                "señaladas " + "por ministro de Salud", "El Universo",
-                "https://www.eluniverso.com/guayaquil/2020/12/29/nota/9087883/cifras-covid-19-hospitales-no-coinciden" +
-                        "-senaladas-ministro-salud", "30/12/20");
-        this.noticias.add(noticia);
+        this.noticias.add(new Noticia("Cifras COVID-19 de los hospitales de Guayaquil no coinciden con las " +
+                "señaladas por ministro de Salud", "El Universo", "https://www.eluniverso.com/guayaquil/"
+                +"2020/12/29/nota/9087883/cifras-covid-19-hospitales-no-coinciden" + "-senaladas-ministro-salud",
+                "30/12/20"));
 
-        noticia = new Noticia("Las fiestas tradicionales del año viejo se suspendieron por el coronavirus",
-                "El Comercio", "https://www.elcomercio.com/actualidad/fiestas-tradicionales-suspendidas-coro" +
-                "navirus-ecuador.html", "30/12/20");
-        this.noticias.add(noticia);
+        this.noticias.add(new Noticia("Las fiestas tradicionales del año viejo se suspendieron por el coronavirus",
+                "El Comercio","https://www.elcomercio.com/actualidad/fiestas-tradicionales-suspendidas-coro"
+                +"navirus-ecuador.html","30/12/20"));
+
+        this.fuentes.add("El Comercio");
+        this.fuentes.add("El Universo");
     }
 
     public void agregarFuente(String fuente) {
@@ -59,8 +60,7 @@ public class ModeloBusqueda {
         return noticiasBuscadas;
     }
 
-    public ArrayList devolverInformacion(){
-        ArrayList noticiasBuscadas = this.noticias;
-        return noticiasBuscadas;
+    public ArrayList devolverNoticias(){
+        return this.noticias    ;
     }
 }

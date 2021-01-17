@@ -50,7 +50,7 @@ public class VistaPantallaTest {
     @Test
     public void given_Filtros_when_getInformaciónConsulta_notNull(){
         VistaPantalla v = new VistaPantalla();
-        ArrayList<Noticia> noticias = v.getInformacionConsulta();
+        ArrayList<Noticia> noticias = v.obtenerConsulta();
         assertNotNull(noticias);
     }
 

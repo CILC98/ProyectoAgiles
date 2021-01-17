@@ -18,9 +18,9 @@ public class VistaPantalla {
         actualizarVista(noticias);
         return noticias;
     }
-    public ArrayList<Noticia> getInformacionConsulta(){
+    public ArrayList<Noticia> obtenerConsulta(){
         ArrayList noticias ;
-        noticias = new GestorConsulta().obtenerNoticias();
+        noticias = new GestorConsulta().solicitarNoticias();
         actualizarVista(noticias);
         return noticias;
     }
