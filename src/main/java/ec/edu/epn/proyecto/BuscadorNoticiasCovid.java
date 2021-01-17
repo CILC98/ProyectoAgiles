@@ -9,7 +9,7 @@ public class BuscadorNoticiasCovid{
         System.out.println("---Consulta--");
         ArrayList<Noticia> noticiasConsultadas= v.obtenerConsulta();
         System.out.println("---Consulta Filtrada--");
-        String [] filtros = {"COVID","El Universo"};
+        String [] filtros = {"coronavirus","El Comercio"};
         ArrayList<Noticia> noticiasFiltradas= v.getInformacionFiltrada(filtros);
         System.out.println("Fin del main");
     }
