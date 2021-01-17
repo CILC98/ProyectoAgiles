@@ -10,13 +10,15 @@ public class FiltracionNoticiasTest {
     @Test
     public void given_filtros_when_obtenerNoticias_ok(){
         String [] filtros = {"COVID-19","El Universo"};
-        for (Noticia i : new FiltracionNoticias().obtenerNoticias(filtros)){
+        FiltracionNoticias f = new FiltracionNoticias();
+        ArrayList<Noticia> actual= f.obtenerNoticias(filtros);
+        for (Noticia i : actual){
             assertTrue(i.getFuente().contains("El Universo") && i.getTítulo().contains("COVID-19"));
         }
     }
 
     @Test
-    public void given_filtros_when_obtenerNoticias_noNull(){
+    public void given_filtrosNoEncontrados_when_obtenerNoticias_long_cero(){
         String [] filtros = {"ABC","OPT"};
         FiltracionNoticias f = new FiltracionNoticias();
         ArrayList<Noticia> actual= f.obtenerNoticias(filtros);
@@ -24,7 +26,7 @@ public class FiltracionNoticiasTest {
     }
 
     @Test
-    public void given_filtros_when_VerificarInformacion_ok(){
+    public void given_filtros_when_VerificarInformacion_NoInvalido_Valido(){
         String [] filtros = {"ABC","OPT","COVID-19","*/19","#El_Universo"};
         FiltracionNoticias f = new FiltracionNoticias();
         String actual= f.verificarInformacion(filtros);
